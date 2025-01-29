@@ -1,5 +1,9 @@
 # Changelog
 
+## \[0.17.5]
+
+- [`c6e6474`](https://github.com/tauri-apps/cargo-mobile2/commit/c6e6474e78bb35edc6bc719c28586d61e5e37705) ([#435](https://github.com/tauri-apps/cargo-mobile2/pull/435) by [@FabianLars](https://github.com/tauri-apps/cargo-mobile2/../../FabianLars)) Add `rust-version` field in Cargo.toml. The actual MSRV remains unchanged (`1.76`).
+
 ## \[0.17.4]
 
 - [`c4d420f`](https://github.com/tauri-apps/cargo-mobile2/commit/c4d420f9b9a35b52e24ad06de6c810f424ec45a3) ([#414](https://github.com/tauri-apps/cargo-mobile2/pull/414) by [@amrbashir](https://github.com/tauri-apps/cargo-mobile2/../../amrbashir)) Fix `android::emulator::avd_list` function interpreting log lines from `emulator -list-avd` as valid `Emulator`
