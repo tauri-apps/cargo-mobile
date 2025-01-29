@@ -13,7 +13,7 @@ on:
       - "**.toml"
       - "**.lock"
       - ".github/workflows/*.yml"
-    branches: [master]
+    branches: [dev]
 
 jobs:
   Check_Formatting:
@@ -31,7 +31,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        rust_version: [stable, beta, nightly]
+        rust_version: [1.76, stable, beta, nightly]
         platform:
           - { target: x86_64-pc-windows-msvc, os: windows-latest }
           - { target: x86_64-unknown-linux-gnu, os: ubuntu-latest }
