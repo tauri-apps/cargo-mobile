@@ -123,7 +123,7 @@ pub fn install(reinstall_deps: bool) -> Result<(), InstallError> {
                     cause,
                 }
             })?;
-            std::io::copy(&mut response.into_reader(), &mut out).map_err(|cause| {
+            std::io::copy(&mut response.into_body().into_reader(), &mut out).map_err(|cause| {
                 InstallError::CopyToFile {
                     path: jar_path,
                     cause,
