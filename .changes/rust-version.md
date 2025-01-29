@@ -2,4 +2,4 @@
 cargo-mobile2: patch
 ---
 
-Add `rust-version` field in Cargo.toml. The MSRV of this project is `1.73`.
+Add `rust-version` field in Cargo.toml. The actual MSRV remains unchanged (`1.76`).
