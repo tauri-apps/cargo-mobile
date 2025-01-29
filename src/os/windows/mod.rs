@@ -86,7 +86,7 @@ impl Application {
                 // So it's not modified actually.
                 PCWSTR::from_raw(ext.as_ptr()),
                 PCWSTR::null(),
-                PWSTR::null(),
+                None,
                 &mut len as _,
             )
             .ok()
@@ -105,7 +105,7 @@ impl Application {
                 // So it's not modified actually.
                 PCWSTR::from_raw(RUST_EXT.as_ptr()),
                 PCWSTR::null(),
-                PWSTR(command.as_mut_ptr()),
+                Some(PWSTR(command.as_mut_ptr())),
                 &mut len as _,
             )
             .ok()?;
@@ -225,7 +225,7 @@ impl NativeArgv {
 
 impl Drop for NativeArgv {
     fn drop(&mut self) {
-        let _ = unsafe { LocalFree(HLOCAL(self.argv as _)) };
+        let _ = unsafe { LocalFree(Some(HLOCAL(self.argv as _))) };
     }
 }
 
